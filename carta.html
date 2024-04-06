@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url(https://scontent.fmzt2-1.fna.fbcdn.net/v/t1.15752-9/434620191_394300440129957_3130453701631906179_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF1Y-hwMDu7S4DWfc8oU-9e9CzgjE0jY3b0LOCMTSNjdi6_TzdZ4AYwuvOIn9F09_2CdCBf8y5FV-OFW7BSRrTQ&_nc_ohc=UzZU0FsFiJMAb7KZ4GV&_nc_ht=scontent.fmzt2-1.fna&oh=03_AdUPiV7GHu9XuLfmrEAHNzNLkuU3M-Bn3n0VCu0GpPIyHg&oe=66386F37&dl=1);
+        background-color: transparent;
+        font-family: Georgia, serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+     .container {
+        width: 80%;
+        max-width: 500px;
+        background-color: transparent;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        padding: 3em 2em;
+        border-radius: 10px;
+        text-align: center;
+
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 0.5em;
+        color: darkred;
+        background-color: black;
+        box-shadow: 0 10px 8px black;
+      }
+      p {
+        font-size: 1.0em;
+        line-height: 1.5;
+        margin-top: 0;
+        color: darkred;
+        text-shadow:0 8px 5px black;
+      }
+     .signature {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+      }
+     .signature img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 25em;
+      }
+     .signature p {
+        font-size: 1.2em;
+        margin-top: 0;
+      }
+     .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 35em;
+        padding-left: ;
+      }
+      button {
+        background-color: gray;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1.2em;
+        margin: 2em 0;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Amor mio</h1>
+      <p id="letter">
+       Hace muchísimo no escribía una carta y honestamente no se por donde empezar
+      </p>
+      <p id="letter2">
+       Las personas somos egoístas, aveces un poco estúpidas y hasta hace unos meses no estaba segura de si en realidad había alguien en este gran planeta que de verdad valiera la pena, hasta que te conocí. 
+      </p>
+      <p id="letter3">
+        Desde la primera vez que te vi, sentada con tus casquitos y viéndome con esa mirada tan hermosa, supe que tenía que adentrarme en esa preciosa persona que se veía detrás de esos ojos, en tan poco tiempo te has convertido en una de mis personas favoritas y eso me encanta, realmente quiero estar contigo y si me dejas puedo tratar de hacerte feliz y prometo jamas lastimar tu corazón.
+        Quiero que sepas que mi amor hacia ti es lo más puro que e presenciado en mi corta vida, espero, deseo y anhelo con todo mi corazón que esto funcione, ojalá la vida nos lleve por el mismo camino y me deje conocer cada parte de ti.
+      </p>
+      <p id="letter4">
+      se que eres una persona maravillosa y quiero pasar mi tiempo contigo.
+Te quiero mucho ieni
+      </p>
+        <p>Valeria:3</p>
+        <div class="signature">
+          <img src="https://scontent.fmzt2-1.fna.fbcdn.net/v/t1.15752-9/434620191_394300440129957_3130453701631906179_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF1Y-hwMDu7S4DWfc8oU-9e9CzgjE0jY3b0LOCMTSNjdi6_TzdZ4AYwuvOIn9F09_2CdCBf8y5FV-OFW7BSRrTQ&_nc_ohc=UzZU0FsFiJMAb7KZ4GV&_nc_ht=scontent.fmzt2-1.fna&oh=03_AdUPiV7GHu9XuLfmrEAHNzNLkuU3M-Bn3n0VCu0GpPIyHg&oe=66386F37&dl=1">
+        </div>
+      </div>
+      <div class="button-container">
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
+    <script>
+      const letter = document.getElementById('letter');
+      const letter2 = document.getElementById('letter2');
+      const letter3 = document.getElementById('letter3');
+      const letter4 = document.getElementById('letter4');
+      const nextButton = document.getElementById('nextButton');
+      let currentLetter = 1;
+      nextButton.addEventListener('click', () => {
+        if (currentLetter === 1) {
+          letter.style.display = 'none';
+          letter2.style.display = 'block';
+          currentLetter++;
+        } else if (currentLetter === 2) {
+          letter2.style.display = 'none';
+          letter3.style.display = 'block';
+          currentLetter++;
+        } else if (currentLetter === 3) {
+          letter3.style.display = 'none';
+          letter4.style.display = 'block';
+          currentLetter++;
+        } else {
+          nextButton.style.display = 'none';
+        }
+      });
+    </script>
+  </body>
+</html>
